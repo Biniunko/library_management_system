@@ -22,10 +22,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 ]
 
+# Add API URLs
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/", include("books.urls")),
-    path("api/", include("user.urls")),
-    path("api/", include("transaction.urls")),
-    path("api/", include("subscription.urls")),
+    path("api/books/", include("books.urls")),
+    path("api/user/", include("user.urls")),
+    path("api/transaction/", include("transaction.urls")),
+    path("api/subscription/", include("subscription.urls")),
 ]
